@@ -1,0 +1,88 @@
+body {
+    background: none;
+}
+
+#banner {
+    margin: 0;
+    background: none;
+    height: 57px;
+    padding: 0;
+}
+
+#printlogo {
+    display: block;
+    padding: 0;
+}
+
+#search {
+    display: none;
+}
+
+#page {
+    margin: 0;
+    background: none;
+}
+
+#allcontent {
+    background: none;
+    padding: 0;
+}
+
+#contentText {
+    padding: 0;
+    background: none;
+}
+
+#content {
+    background: none;
+    margin: 10px 0;
+    color: #747474;
+}
+
+#content h1 {
+    font-size: 18pt;
+    color: #264a94;
+    font-weight: normal;
+    margin: 10px 0 4px 0;
+}
+
+#content h2 {
+    color: #62a6d0;
+    font-weight: normal;
+    font-size: 14pt;
+    margin: 10px 0 4px 0;
+}
+
+.menuWidget {
+    display: none;
+}
+
+#sidebar {
+    display: none;
+}
+
+#footer {
+    clear: both;
+    text-align: center;
+    font-size: 80%;
+}
+
+#footer ul {
+    display: none;
+}
+
+#footer p#copyright {
+    margin: 0;
+}
+
+#rss {
+    display: none;
+}
+
+pre {
+    background-color: #f0f0f0;
+    padding: 12px;
+    font-family: Monaco, Lucida Console, monospace;
+    font-size: 90%;
+    line-height: 1.1;
+}

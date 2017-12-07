@@ -1,0 +1,7 @@
+{shop_name}
+ 
+Notification sur {shop_name}
+ 
+{message}
+ 
+Mail propulsé par ContactForm depuis {shop_name}

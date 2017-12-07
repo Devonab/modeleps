@@ -1,0 +1,11 @@
+
+Mensaje de su formulario {form_name}
+
+
+
+Aquí está el mensaje:
+
+
+{message}
+
+El correo impulsado por ContactForm para {shop_name}

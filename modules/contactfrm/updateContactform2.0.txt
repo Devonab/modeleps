@@ -1,0 +1,9 @@
+Remplacer XX par le prefixe de votre base de données puis executer la requète dans phpMyadmin.
+Replace XX with the prefix of your database and execute the query in phpMyAdmin.
+Reemplace XX con el prefijo de su base de datos y ejecutar la consulta en phpMyAdmin.
+Sostituire XX con il prefisso del vostro database ed eseguire la query in phpMyAdmin.
+Ersetzen Sie XX mit dem Präfix Ihrer Datenbank und führen Sie die Abfrage in phpMyAdmin.
+
+
+
+ALTER TABLE `XX_contactfrm` ADD `id_shop` INT NOT NULL DEFAULT '1'

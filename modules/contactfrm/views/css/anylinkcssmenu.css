@@ -1,0 +1,68 @@
+.anylinkcsscols{
+position: absolute;
+left: 0;
+top: 0;
+visibility: hidden;
+border: 1px solid black;
+padding: 10px;
+font: normal 12px Verdana;
+z-index: 100; /*zIndex should be greater than that of shadow's below*/
+background: #F7F8F9;
+}
+
+.anylinkcsscols .column{
+width: 100px;
+float: left;
+/*border: 1px solid black;*/
+margin: 0px 0px 0px 0px;
+
+
+}
+
+.anylinkcsscols .column ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+.anylinkcsscols li{
+padding-bottom: 3px;
+}
+
+/* ######### class for shadow DIV ######### */
+
+
+.anylinkshadow{ /*CSS for shadow. Keep this as is */
+position: absolute;
+left: 0;
+top: 0;
+z-index: 99; /*zIndex for shadow*/
+background: black;
+visibility: hidden;
+}
+
+table.homepage  {
+background-color:#F7F8F9;
+border:1px solid #D5D5D5;
+padding:5px;
+}
+table.homepage td {
+border-color:#EFEFEF;
+border-style:solid;
+padding:5px;
+text-align:center;
+}
+
+table.homepage1  {
+background-color:#F7F8F9;
+border:1px solid #D5D5D5;
+padding:5px;
+}
+table.homepage1 td {
+border-color:#EFEFEF;
+border-style:solid;
+padding:5px;
+text-align:center;
+height:100px;
+width:100px;
+}

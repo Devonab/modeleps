@@ -1,0 +1,7 @@
+{shop_name}
+ 
+meddelelse fra {shop_name}
+ 
+{message}
+ 
+Mail drevet af Contact Form for {shop_name}

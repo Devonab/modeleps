@@ -1,0 +1,11 @@
+
+Message from your form {form_name}
+
+
+
+Here is the message:
+
+
+{message}
+
+Mail powered by ContactForm for {shop_name}

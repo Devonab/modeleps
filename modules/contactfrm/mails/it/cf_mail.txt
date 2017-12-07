@@ -1,0 +1,11 @@
+
+Messaggio dal modulo {form_name}
+
+
+
+Ecco il messaggio:
+
+
+{message}
+
+Posta alimentato da ContactForm dal {shop_name}

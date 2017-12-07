@@ -1,0 +1,6 @@
+div[id^="recaptcha_div"] >div {
+    transform: scale(0.78);
+    -webkit-transform: scale(0.78);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}

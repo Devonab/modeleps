@@ -1,0 +1,284 @@
+
+
+
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+
+-- [CF_tag]
+
+
+
+CREATE TABLE IF NOT EXISTS `p1614s_contactform` (
+`fid`  int(10) unsigned   NOT NULL   auto_increment,
+`formname`  varchar(225)   NOT NULL   ,
+`email`  varchar(225)   NOT NULL   ,
+`mailtype`  varchar(225)   NOT NULL   ,
+`layout`  text   default NULL  ,
+`clayout`  text   default NULL  ,
+`idcms`  int(11)   NOT NULL   ,
+`id_shop`  int(11)   NOT NULL   ,
+`position`  int(11)   NOT NULL   ,
+`pdf`  int(2)   NOT NULL   ,
+`notif_pdf`  int(2)   NOT NULL   ,
+PRIMARY KEY  (`fid`)
+) ENGINE=MyISAM DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci AUTO_INCREMENT=1;
+
+
+
+
+-- [CF_tag]INSERT INTO `p1614s_contactform` ( `fid` ,  `formname` ,  `email` ,  `mailtype` ,  `layout` ,  `clayout` ,  `idcms` ,  `id_shop` ,  `position` ,  `pdf` ,  `notif_pdf`   ) VALUES
+('1','BasicForm','directeur.informatique@netunivers.com','0','<p>{message_from} {shop_name}</p>
+<table style="font-family: Verdana,sans-serif; font-size: 11px; color: #374953; width: 550px;">
+<tbody>
+<tr>
+<td align="left"><a href="{shop_url}" title="{shop_name}"> {shop_logo}</a></td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #db3484; color: #fff; font-size: 12px; font-weight: bold; padding: 0.5em 1em;" align="left">{contactform_in} {form_name}</td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td>{here_msg} : {message}</td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td style="font-size: 10px; border-top: 1px solid #D9DADE;" align="center"><a href="{shop_url}" style="color: #db3484; font-weight: bold; text-decoration: none;"> {shop_name}</a> powered with <a href="http://www.mydomain.com/" style="text-decoration: none; color: #374953;">Contactform</a></td>
+</tr>
+</tbody>
+</table>','<p>{notification} {shop_name}</p>
+<table style="font-family: Verdana,sans-serif; font-size: 11px; color: #374953; width: 550px;">
+<tbody>
+<tr>
+<td align="left"><a href="{shop_url}" title="{shop_name}">{shop_logo}</a></td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #db3484; color: #fff; font-size: 12px; font-weight: bold; padding: 0.5em 1em;" align="left">{notification} {shop_name}</td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td>{message}</td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td style="font-size: 10px; border-top: 1px solid #D9DADE;" align="center"><a href="{shop_url}" style="color: #db3484; font-weight: bold; text-decoration: none;"> {shop_name}</a> powered with <a href="http://www.mydomain.com/" style="text-decoration: none; color: #374953;">Contactform</a></td>
+</tr>
+</tbody>
+</table>','0','1','0','0','0');
+
+-- [CF_tag]
+
+
+
+CREATE TABLE IF NOT EXISTS `p1614s_contactform_item` (
+`fdid`  int(10) unsigned   NOT NULL   auto_increment,
+`fid`  int(11)   NOT NULL   ,
+`fields_id`  varchar(225)   default NULL  ,
+`fields_name`  varchar(225)   default NULL  ,
+`confirmation`  int(11)   NOT NULL   ,
+`fields_valid`  varchar(225)   NOT NULL   ,
+`fields_type`  varchar(225)   NOT NULL   ,
+`fields_style`  text   default NULL  ,
+`err_style`  text   default NULL  ,
+`fields_suppl`  varchar(255)   NOT NULL   ,
+`fields_require`  int(11)   NOT NULL   ,
+`fields_maxtxt`  varchar(255)   NOT NULL   ,
+`order`  int(11)   NOT NULL   ,
+`published`  int(11)   NOT NULL   ,
+PRIMARY KEY  (`fdid`)
+) ENGINE=MyISAM DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci AUTO_INCREMENT=1;
+
+
+
+
+-- [CF_tag]INSERT INTO `p1614s_contactform_item` ( `fdid` ,  `fid` ,  `fields_id` ,  `fields_name` ,  `confirmation` ,  `fields_valid` ,  `fields_type` ,  `fields_style` ,  `err_style` ,  `fields_suppl` ,  `fields_require` ,  `fields_maxtxt` ,  `order` ,  `published`   ) VALUES
+('1','1','title','title','0','none','select','','','','1','250','1','1'),
+('2','1','name','name','0','none','text','','','','1','250','2','1'),
+('3','1','myemail','myemail','1','email','email','','','','1','250','3','1'),
+('4','1','subject','subject','0','none','text','','','','1','250','4','1'),
+('5','1','message','message','0','none','textarea','','','rows="8" cols="40"','1','250','5','1'),
+('6','1','captcha','captcha','1','none','captcha','','','','0','250','6','0'),
+('7','1','submit','submit','0','none','submitbtn','','','','0','250','7','1');
+
+-- [CF_tag]
+
+
+
+CREATE TABLE IF NOT EXISTS `p1614s_contactform_lang` (
+`id_lang`  int(11)   NOT NULL   ,
+`fid`  varchar(225)   NOT NULL   ,
+`alias`  varchar(225)   default NULL  ,
+`formtitle`  varchar(225)   NOT NULL   ,
+`thankyou`  text   default NULL  ,
+`msgbeforeForm`  text   default NULL  ,
+`msgafterForm`  text   default NULL  ,
+`toname`  varchar(225)   NOT NULL   ,
+`subject`  varchar(225)   default NULL  ,
+`subject_notif`  varchar(225)   default NULL  ,
+`automailresponse`  text   default NULL  ,
+`returnurl`  varchar(225)   default NULL  
+) ENGINE=MyISAM DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci AUTO_INCREMENT=1;
+
+
+
+
+-- [CF_tag]INSERT INTO `p1614s_contactform_lang` ( `id_lang` ,  `fid` ,  `alias` ,  `formtitle` ,  `thankyou` ,  `msgbeforeForm` ,  `msgafterForm` ,  `toname` ,  `subject` ,  `subject_notif` ,  `automailresponse` ,  `returnurl`   ) VALUES
+('0','1','contact-form','Contact Form','#','<p><strong>Sample</strong> html Text <em>before</em> form </p>
+        <center><img src="/prestashop1614/img/logo.jpg"></center>','<p><strong>Sample</strong> html Text <em>after</em> form </p>
+        <center><img src="/prestashop1614/img/logo.jpg"></center>','Administrator','Contact Prestashop','Contact Prestashop Notification','<p>Thank you for your request. 
+        We will respond shortly to the email you just send us. Sincerely.<br />
+        <br />Team.</p>','#'),
+('1','1','formulaire-de-contact','Formulaire de contact','#','<p><strong>Exemple</strong> de texte <em>html</em> avant le formulaire</p>
+<center><img src="/prestashop1614/img/logo.jpg" /></center>','<p><strong>Exemple</strong> de texte <em>html</em> après le formulaire</p>
+<center><img src="/prestashop1614/img/logo.jpg" /></center>','Administrateur','Contact Prestashop','Notification Contact Prestashop','<p>Merci pour votre demande. Nous répondrons très prochainement au mail que vous venez de nous faire parvenir. Bien cordialement.<br /><br />L´équipe.</p>','#'),
+('0','1','formulario-de-contacto','Formulario de contacto','#','<p><strong>Muestra</strong> html Texto <em>antes</em>
+        de formulario</p><center><img src="/prestashop1614/img/logo.jpg"></center>','<p>
+                    <strong>Muestra</strong> html html texto después de la formulario</p><center><img src="/prestashop1614/img/logo.jpg"></center>','Administrador','Póngase en contacto con PrestaShop','Póngase en contacto con PrestaShop notificación','<p>
+        Gracias por su solicitud. Nosotros responderemos a la brevedad
+        al correo electrónico que nos acaba de enviar. 
+        Atentamente.<br /><br />Equipo.</p>','#'),
+('0','1','kontaktformular','Kontaktformular','#','<p><strong>Voorbeeld</strong> html tekst <em>voordat</em>
+        het formulier</p><center><img src="/prestashop1614/img/logo.jpg"></center>','<p><strong>Voorbeeld</strong>
+                    html text <em>html</em> nadat het formulier</p>
+        <center><img src="/prestashop1614/img/logo.jpg"></center>','Administrator','Kontakt PrestaShop','Kontakt PrestaShop Benachrichtigung','
+        <p>Vielen Dank für Ihre Anfrage. Wir werden in Kürze Antwort
+        auf die E-Mail senden Sie uns einfach. 
+        Mit freundlichen Grüßen.<br /><br />Team.</p>','#'),
+('0','1','modulo-di-contatto','Modulo di contatto','#','<p><strong>Testo</strong> di esempio html <em>prima</em>
+        che il modulo</p><center><img src="/prestashop1614/img/logo.jpg"></center>','<p><strong>Testo</strong> di esempio html <em>prima</em>
+        che il modulo</p>
+        <p><strong>Esempio</strong> di testo html <em>html</em> dopo il form</p><center><img src="/prestashop1614/img/logo.jpg"></center>','Administrator','Contatta PrestaShop','Contatta PrestaShop notifica','<p>Grazie per la vostra richiesta. 
+        Ci sarà presto una risposta alle e-mail 
+        è sufficiente inviare. Cordiali saluti.<br /><br />Team.</p>','#');
+
+-- [CF_tag]
+
+
+
+CREATE TABLE IF NOT EXISTS `p1614s_contactform_item_lang` (
+`fdid`  int(11)   NOT NULL   ,
+`id_lang`  int(11)   NOT NULL   ,
+`fields_title`  varchar(225)   NOT NULL   ,
+`fields_desc`  text   default NULL  ,
+`confirmation_txt`  varchar(225)   NOT NULL   ,
+`fields_default`  text   default NULL  ,
+`error_txt`  varchar(255)   default NULL  ,
+`error_txt2`  varchar(255)   default NULL  
+) ENGINE=MyISAM DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci AUTO_INCREMENT=1;
+
+
+
+
+-- [CF_tag]INSERT INTO `p1614s_contactform_item_lang` ( `fdid` ,  `id_lang` ,  `fields_title` ,  `fields_desc` ,  `confirmation_txt` ,  `fields_default` ,  `error_txt` ,  `error_txt2`   ) VALUES
+('1','0','Title','','',';Mrs;Ms;Mr','',''),
+('1','1','Titre','','',';Mme;Mlle;Mr','',''),
+('1','0','Título','','',';Sra.; El Sr.','',''),
+('1','0','Titel','','','Frau;Fräulein;Herr','',''),
+('1','0','Titolo','','','Ms.; Miss; Sig.','',''),
+('2','0','Your full name','','','Your full name ...','',''),
+('2','1','Votre nom et prenom','','','Votre nom ...','',''),
+('2','0','Su nombre','','','Su nombre ..','',''),
+('2','0','Ihr vollständiger Name','','','Ihr Name ...','',''),
+('2','0','Il tuo nome completo','','','Il tuo nome completo','',''),
+('3','0','Your e-mail','','Confirm your email','','',''),
+('3','1','Votre e-mail','','Confirmer votre email','','',''),
+('3','0','Tu e-mail','','Confirme su correo electrónico','','',''),
+('3','0','Ihre E-Mail','','Bestätigen Sie Ihre E-Mail','','',''),
+('3','0','Il tuo indirizzo e-mail','','Conferma la tua email','','',''),
+('4','0','Subject','','','','',''),
+('4','1','Sujet','','','','',''),
+('4','0','Tema','','','','',''),
+('4','0','Über','','','','',''),
+('4','0','Soggetto','','','','',''),
+('5','0','Message','','','','',''),
+('5','1','Message','','','','',''),
+('5','0','Mensaje','','','','',''),
+('5','0','Nachricht','','','','',''),
+('5','0','Messaggio','','','','',''),
+('6','0','Verification code','','Retape code here','','',''),
+('6','1','Code de sécurity','','Recopier le code ici','','',''),
+('6','0','Código de verificación','','Copia el código aquí','','',''),
+('6','0','Bestätigungs-Code','','Kopieren Sie den Code hier','','',''),
+('6','0','Codice di verifica','','Riscrivi il codice qui','','',''),
+('7','0','','','','Send','',''),
+('7','1','','','','Envoyer','',''),
+('7','0','','','','Enviar','',''),
+('7','0','','','','Senden','',''),
+('7','0','','','','Invia','','');
+
+-- [CF_tag]
+
+
+
+CREATE TABLE IF NOT EXISTS `p1614s_contactform_relation` (
+`id`  int(10) unsigned   NOT NULL   auto_increment,
+`etat`  tinyint(1)   NOT NULL   ,
+`type`  tinyint(1)   NOT NULL   ,
+`default`  int(10)   NOT NULL   ,
+PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci AUTO_INCREMENT=1;
+
+
+
+
+
+-- [CF_tag]
+
+
+
+CREATE TABLE IF NOT EXISTS `p1614s_contactform_relation_lang` (
+`rid`  int(11) unsigned   NOT NULL   ,
+`id_lang`  int(11)   NOT NULL   ,
+`title`  text   default NULL  
+) ENGINE=MyISAM DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci AUTO_INCREMENT=1;
+
+
+
+
+
+-- [CF_tag]
+
+
+
+CREATE TABLE IF NOT EXISTS `p1614s_contactform_relation_item` (
+`rid`  int(11)   NOT NULL   ,
+`fid`  int(11)   NOT NULL   ,
+`order`  int(11)   NOT NULL   
+) ENGINE=MyISAM DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci AUTO_INCREMENT=1;
+
+
+
+
+
+-- [CF_tag]
+
+
+
+CREATE TABLE IF NOT EXISTS `p1614s_contactform_relation_item_lang` (
+`rid`  int(11)   NOT NULL   ,
+`fid`  int(11)   NOT NULL   ,
+`id_lang`  int(11)   NOT NULL   ,
+`txtsuppl`  varchar(1024)   NOT NULL   
+) ENGINE=MyISAM DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci AUTO_INCREMENT=1;
+
+
+
+
+
+-- [CF_tag]
+

@@ -1,0 +1,17 @@
+/* --- ERRORS --- */
+.error INPUT, .error TEXTAREA, .error SELECT {
+    border-width:2px;
+    border-style:solid;
+    border-color:#ED1C24;
+    background:#FFE6E7;
+    }
+.iferror {
+    margin:0;
+    display:none;
+    }
+.error .iferror {
+    display:block;
+    color:#ED1C24;
+    }
+
+.hint { color:#888; }

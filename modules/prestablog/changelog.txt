@@ -1,0 +1,123 @@
+© Permanent HDClic / Release Notes for module PrestaShop 1.7
+Module : PrestaBlog
+[root] = ./modules/prestablog
+[theme] = for all themes : current "grid-for-1-7"
+[pre] = default prefixe for tables installation of PrestaShop : “ps_”
+--------------------------------
+#########################
+#   v4.0.3 - 2017-07-27 #
+#########################
+
+    Note:
+
+    Lookbook feature is currently developing and will be available in the future version
+
+    Important features added and changed :
+
+    [.]
+
+    Added Features:
+
+    [+] [root]/class/lookbook.class.php : add lookbook table for link news
+    [+] [root]/mails/it/* : add translations it for mails
+    [+] [root]/translations/it.php : add translations it
+    [+] [root]/upgrade/upgrade-4.0.3.php : add upgrade and refresh cache (installation sql lookbook link)
+    [+] [root]/upgrade/upgrade-4.0.2.php : add upgrade and refresh cache
+
+    Fixed bugs:
+
+    [.]
+
+    Improved/changed features:
+
+    [*] [root]/controllers/admin/AdminPrestaBlogAjaxController.php : better search for ajax search products, articles and lookbooks
+    [+] [root]/prestablog.php : add placeholder for ajax search products, articles and lookbooks
+    [*] [root]/controllers/admin/AdminPrestaBlogAjaxController.php : use PrestaBlog::getT() to get theme name
+    [*] [root]/controllers/front/blog.php : use PrestaBlog::getT() to get theme name
+    [*] [root]/prestablog.php : use self::getT() to get theme name
+    [*] [root]/prestablog.php : use self::imgUpPath() to get path of upload images, excepted loop with theme value
+    [*] [root]/prestablog.php : use self::imgPath() instead deprecated dirname(__FILE__).'/views/img/'
+    [*] [root]/prestablog.php : use $this->confpath instead deprecated $this->path_module_conf
+    [*] [root]/* : compliance of PSR2 PrestaShop 1.7 Validator (standards warnings long lines)
+
+--------------------------------
+#########################
+#   v4.0.2 - 2017-06-01 #
+#########################
+
+    Note:
+
+    The before 4.0.2 is a version dev beta for transition to 4.0.3
+
+#########################
+#   v4.0.1 - 2017-04-25 #
+#########################
+
+    Note:
+
+    [.]
+
+    Important features added and changed :
+
+    [.]
+
+    Added Features:
+
+    [+] [root]/upgrade/upgrade-4.0.1.php : add upgrade and refresh cache
+    [+] [root]/prestablog.php : add menu tab in BO
+    [+] [root]/views/css/prestablog-back-office.css : add css for bo header
+
+    Fixed bugs:
+
+    [*] [root]/prestablog.php : fix opengraph for app id facebook
+    [*] [root]/views/templates/hook/[theme]_header-meta-og.tpl : fix opengraph for app id facebook
+    [*] [root]/prestablog.php : fix tiny_mce skins for prestashop
+    [+] [root]/views/js/facebook-count.js : add facebook js for comments count
+    [*] [root]/views/js/facebook.js : fix url facebook comments js
+    [*] [root]/prestablog.php : fix facebook comments js
+    [*] [root]/controllers/front/blog.php : fix facebook comments js
+    [*] [root]/views/templates/hook/[theme]_page-all.tpl : fix facebook comments js
+    [*] [root]/views/templates/hook/[theme]_page-subblock.tpl : fix facebook comments js
+    [*] [root]/prestablog.php : fix complete meta tags on the front controller blog
+    [*] [root]/views/templates/hook/[theme]_page.tpl : add head_seo block for front controller blog meta tags
+    [*] [root]/prestablog.php : change input length with large sufixe in displayConfSlide()
+    [*] [root]/class/categories.class.php : 2 fixes low complexe in(select) in the sql to get groups users
+    [*] [root]/class/correspondancescategories.class.php : fix low complexe in(select) in the sql to get groups users
+    [*] [root]/class/news.class.php : 2 fixes low complexe in(select) in the sql to get groups users
+    [*] [root]/prestablog.php : fix low complexe in(select) in the sql to get groups users
+    [*] [root]/prestablog.php : add static function to fix low complexe in(select) in the sql to get groups users
+
+    Improved/changed features:
+
+    [*] [root]/* : compliance of PSR2 PrestaShop 1.7 Validator (errors & standards)
+    [*] [root]/views/css/admin.css : enable float left style for thumb in articles top list
+    [*] [root]/views/templates/hook/[theme]_bloc-catliste.tpl : change button class link to all articles
+    [*] [root]/views/templates/hook/[theme]_bloc-dateliste.tpl : change button class link to all articles
+    [+] [root]/prestablog.php : detect if configurations _layout_blog, _lb_title_length, _lb_intro_length exists after upgrade 1.6>1.7
+    [*] [root]/prestablog.php : complete meta tags with empty description for no duplicate content
+    [*] [root]/translations/es.php : update translations for lookbook
+    [*] [root]/views/css/[theme]-modules.css : change css for button link to all articles in date & categories blocs
+
+#########################
+#   v4.0.0 - 2017-01-19 #
+#########################
+
+    Note:
+
+    [.]
+
+    Important features added and changed :
+
+    [.]
+
+    Added Features:
+
+    [.]
+
+    Fixed bugs:
+
+    [.]
+
+    Improved/changed features:
+
+    [.]

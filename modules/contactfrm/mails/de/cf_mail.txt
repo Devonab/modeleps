@@ -1,0 +1,11 @@
+
+Nachricht von Ihrem Formular {form_name}
+
+
+
+Hier ist die Botschaft:
+
+
+{message}
+
+Mail angetrieben durch Kontaktformular für {shop_name}
