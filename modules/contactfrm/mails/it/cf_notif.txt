@@ -1,7 +1,0 @@
-{shop_name}
- 
-Notifica {shop_name}
- 
-{message}
- 
-Posta alimentato da ContactForm dal {shop_name}

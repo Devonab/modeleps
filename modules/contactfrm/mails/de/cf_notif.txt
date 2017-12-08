@@ -1,7 +1,0 @@
-{shop_name}
- 
-Benachrichtigung über {shop_name}
- 
-{message}
- 
-Mail angetrieben durch Kontaktformular für {shop_name}

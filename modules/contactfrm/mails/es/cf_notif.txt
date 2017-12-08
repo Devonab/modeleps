@@ -1,7 +1,0 @@
-{shop_name}
- 
-notificación en {shop_name}
- 
-{message}
- 
-El correo impulsado por ContactForm para {shop_name}

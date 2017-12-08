@@ -1,7 +1,0 @@
-{shop_name}
- 
-Zawiadomienie o {shop_name}
- 
-{message}
- 
-Mail Na zasilany Formularza Kontaktowego {shop_name}
