@@ -15,7 +15,6 @@
     padding: 1rem 1.5rem;
   }
   #product &{
-    @include box-shadow;
     background: white;
     span{
       font-weight: 700;
