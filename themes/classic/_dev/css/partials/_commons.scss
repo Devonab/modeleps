@@ -41,7 +41,6 @@ p {
   height: 1.25rem;
   display: inline-block;
   margin: 0.3125rem;
-  @include box-shadow-light;
   border: 1px solid rgba(0,0,0,0.05);
   cursor: pointer;
   background-size: contain;
@@ -70,7 +69,6 @@ p {
 }
 .btn-primary,
 .btn-secondary {
-  @include box-shadow-light;
   text-transform: uppercase;
   font-weight: 600;
   padding: 0.5rem 1.25rem;
@@ -108,9 +106,7 @@ p {
     }
   }
 }
-.card {
-  @include box-shadow;
-}
+
 label ,.label {
   color: $gray-darker;
   text-align: right;
@@ -235,7 +231,6 @@ input, textarea {
   width: auto;
   float: left;
   display: inline-block;
-  @include box-shadow-light;
   input {
     &:focus {
       outline: none;
