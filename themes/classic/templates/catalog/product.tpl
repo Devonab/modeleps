@@ -48,6 +48,7 @@
 {block name='content'}
 
   <section id="main" itemscope itemtype="https://schema.org/Product">
+    <div class="container">
     <meta itemprop="url" content="{$product.url}">
 
     <div class="row">
@@ -261,6 +262,7 @@
         {/block}
       </footer>
     {/block}
+    </div>
   </section>
 
 {/block}
