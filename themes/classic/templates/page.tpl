@@ -27,7 +27,7 @@
 {block name='content'}
 
   <section id="main">
-
+    <div class="container">
     {block name='page_header_container'}
       {block name='page_title' hide}
         <header class="page-header">
@@ -52,7 +52,7 @@
         {/block}
       </footer>
     {/block}
-
+    </div>
   </section>
 
 {/block}
