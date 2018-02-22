@@ -168,19 +168,21 @@
   }
   .breadcrumb {
     background: transparent;
-    padding: 0;
+    padding: 1.25rem 0;
     &[data-depth="1"] {
       display: none;
     }
     ol {
-      padding-left: 0;
+      padding: 1rem;
+      background: #fff;
       margin-bottom: 0;
     }
     li {
       display: inline;
       &::after {
-        content: "/";
+        content: '\f105';
         color: $gray;
+        font-family: 'FontAwesome', sans-serif;
         margin: 0.3125rem;
       }
       &:last-child {
