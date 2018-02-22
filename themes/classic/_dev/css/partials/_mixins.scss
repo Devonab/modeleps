@@ -36,7 +36,9 @@ $retina: '(min--moz-device-pixel-ratio: 1.5),
       position: absolute;
       background: none;
       border: none;
-      bottom: 0.3125rem;
+      bottom: 0;
+      top: 0;
+      margin: auto;
       right: 0.125rem;
       color: $gray;
       .search:hover {
