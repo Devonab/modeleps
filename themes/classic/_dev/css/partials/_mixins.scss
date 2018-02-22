@@ -14,10 +14,12 @@ $retina: '(min--moz-device-pixel-ratio: 1.5),
 /* SEARCHBOX STYLES */
 @mixin search-box {
   form {
+    transition: all .3s ease-out;
     position: relative;
     input[type=text] {
       &:focus {
-        outline: 3px $brand-primary solid;
+        transition: all .3s ease-out;
+        border-color: $brand-primary;
         color: $gray-darker;
         background: white;
         + button .search {
@@ -28,7 +30,7 @@ $retina: '(min--moz-device-pixel-ratio: 1.5),
       padding: 10px;
       min-width: 255px;
       color: $gray;
-      border: $input-btn-border-width solid $input-border-color;
+      border: 1px solid $input-border-color;
     }
     button[type=submit] {
       position: absolute;
